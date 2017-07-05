@@ -46,14 +46,23 @@
     <li>CBrownie Sundae Vanilla ice cream with chocolate sauce, nuts and a cherry on top $6</li>
     </ol>
     <h3>Contact us!</h3>
-    <form action="mail to:markhampierce@gmail.com" method="post" encyte="text/plain" >
+    <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSe3lwWuezxYoR2hrt3cWR9P3498wysxTnbryHC52hJSbYrIjQ/formResponse?" target="hidden_iframe" onsubmit="submitt=true;">
       First name:<br>
-      <input type="text" name="firstname">
+      <input type="text" name="entry.2042811724" id="entry.2042811724">
       <br>
       Last name:<br>
-      <input type="text" name="lastname">
+      <input type="text" name="entry.884335540" id="entry.884335540">
       <br><br>
-      <input type="submit" value="Send">
+      <input type="submit" value="Submit">
     </form>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+    <script src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript">var submitted=false;</script>
+    <script type="text/javascript">
+    $('#gform').on('submit', function(e) {
+      $('#gform *').fadeOut(2000);
+      $('#gform').prepend('Your submission has been processed...');
+    });
+    </script>
 </nav>
 </html>
